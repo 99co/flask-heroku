@@ -1,4 +1,3 @@
-
 import os
 
 from flask import Flask
@@ -14,7 +13,7 @@ app.db = db.DB(app.config['DB_URI'])
 # Routes
 # API Routes
 widget_view = widget.views.WidgetAPI.as_view("widget_view")
-app.add_url_rule("/widget/", view_func=collector_view, methods=['GET', 'POST'])
+app.add_url_rule("/widget/", view_func=widget_view, methods=['GET', 'POST'])
 
 if __name__ == "__main__":
     # Bind to PORT if defined, otherwise default to 5000.
