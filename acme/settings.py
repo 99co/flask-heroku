@@ -59,6 +59,10 @@ class ProductionConfig(DevConfig):
     DB_URI = "mongodb://username:password@remotehost:9999/db"
 
 
+BLUEPRINTS = (
+              {"name": "acme.widget.widgets", "url_prefix": "/widgets"},
+            )
+
 # Here we bootstrap the Config object, choosing one depending if we should be
 # in PRODUCTION mode or not.
 # This is followed by overriding set values with those set as envvars via

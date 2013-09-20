@@ -9,7 +9,6 @@ from flask import jsonify
 from flask import render_template
 from flask.views import MethodView
 
-import db
 from decorators import crossdomain
 
 class WidgetAPI(MethodView):
