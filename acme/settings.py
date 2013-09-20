@@ -59,6 +59,10 @@ class ProductionConfig(DevConfig):
     DB_URI = "mongodb://username:password@remotehost:9999/db"
 
 
+class TestConfig(DevConfig):
+    pass
+
+
 BLUEPRINTS = (
               {"name": "acme.widget.widgets", "url_prefix": "/widgets"},
             )
