@@ -7,7 +7,7 @@ import widget
 import db
 
 app = Flask(__name__)
-app.config.from_object(settings)
+app.config.from_object(settings.CONFIG)
 app.db = db.DB(app.config['DB_URI'])
 
 # Routes
